@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>HTML Intro</h1>
+    <nav>
+        <a href="1.html">Home</a>
+        <a href="3.html">HTML Semantics</a>
+    </nav>
+    <p>
+        HTML is a markup language, which adds markup to various elements on web pages. Markup means, using various symbols or special characters to highlight elements and provide these elements with a structure. 
+    </p>
+    <p>
+        These structures can be headings, paragraphs, lists, etc.
+    </p>
+    <p>
+        HTML contains all the sturcture of a web page, without the interactions or styling. 
+    </p>
+    <h3>Simple / Basic Elements in HTML</h3>
+    <ol>
+        <li>
+            <b>Headings</b>: Range from H1 to H6. Only one H1 per page. Used for SEO as well. 
+        </li>
+        <li>
+            <b>Paragraph</b>: To contain paragraphs in separate text boxes. Syntax is < p > and < /p >. 
+        </li>
+        <li>
+            <b>Bold</b>: Used to make a text bold. Uses b tag: < b > text in between < /b >. Here's a sample: <b>This is a sample</b>.
+        </li>
+        <li>
+            <b>Italics</b>:  Used to italisize text. Such as <i>This is a sample.</i>
+        </li>
+        <li>
+            <b>Lists</b>: There are two types of lists in HTML, Ordered and Unordered. 
+            <ul>
+                <li>This text is stored in an unordered list.</li>
+                <li>The unordered list is a list without numbering and uses certain symbols to separate list items from another.</li>
+                <li>Below is a sample of an ordered list. Simply a list with numbered elements. </li>
+                <ol>
+                    <!-- we can nest lists -->
+                    <li>Element 1</li>
+                    <li>Element 2</li>
+                    <li>Element 3</li>
+                </ol>
+            </ul>
+        </li>
+        <li>
+            <b>Anchor Tag</b>: An anchor tag is used to add hyperlinks to a specific text, which when clicked takes the user to the added link destination. For example: <a href="http://www.google.com">google</a>, shall take you to google's website. Here's one more. Click <a href="2.html">here</a>.
+        </li>
+        <li>
+            <b>Images</b>: As the name suggests, simply a syntax to add images to the pages. 
+            <div><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/61/HTML5_logo_and_wordmark.svg/640px-HTML5_logo_and_wordmark.svg.png" style="width: 100px;"></div>
+            <p>As shown, the above image is being fetched and is being added to our page.</p>
+            <ul>
+                <li>
+                    Image has only one tag. No closing tag.
+                </li>
+                <li>
+                    There are certain attributes in the image that must be added to the image. One such is alt, or an alternate text for screen readers. 
+                </li>
+            </ul>
+        </li>
+        <li>
+            <b>Comments</b>: Add information in the code, that should not go in the production code, just for information that needs to passed on for internal code reference. Syntax is 
+             < !-- comment -- >
+        </li>
+    </ol>
+    <p><b>Sidenote on HTML Boilerplate</b>: This is essential structure that is needed in an HTML page. These include the doctype, HTML tag, head tag and finally the body tag.</p>
+    <ul>
+        <li>
+            Both Head and Body are inside the HTML tag.
+        </li>
+        <li>
+            Head contains the metadata of the page. The metadata elements are like: title of the page, scripts, stylesheets references etc.
+        </li>
+        <li>
+            Title element is used by google to show the page on the search results page and also it is visible in the browser tabs. It should be on every single page that we create.
+        </li>
+        <li>
+            Body contains the content that is visible to the user. Such as text, images, buttons etc. 
+        </li>
+        <li>
+            Doctype declaration tells the browser that this page is build on HTML.
+        </li>
+    </ul>
+</body>
+</html>
