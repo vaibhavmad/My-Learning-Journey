@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML Tables</title>
+</head>
+<body>
+    <h1>HTML Tables</h1>
+    <p>Tables were used to layout websites, by positioning content across the webpages.</p>
+    <p>Now however, tables should be reserved for tabular data now.</p>
+    <p><b>Few Elements:</b></p>
+    <ul>
+        <li><b>td:</b> Single cell in a table that contains data.</li>
+        <li><b>tr:</b> used for a row.</li>
+        <li><b>th:</b> Used for the single cells of a header</li>
+    </ul>
+    <p>The following add merge to the table:</p>
+    <ul>
+        <li><b>colspan: </b>to add merge to the coloums</li>
+        <li><b>rowspan:</b> to add merge to the rows</li>
+    </ul>
+    <p>The following breakup the table into sections (good for semantics):</p>
+    <ul>
+        <li><b>thead:</b> for headers, especially if we have more than one row of headers (in case of merged cells).</li>
+        <li><b>tbody:</b> for all the data rows</li>
+        <li><b>tbody:</b> for footers when we have things like total etc.</li>
+    </ul>
+    <p>An example table:</p>
+    
+    <table>
+        <tr>
+            <th rowspan="2">Name</th>
+            <th colspan="2">Minimum Weight</th>
+            <th rowspan="2">Flighted</th>
+        </tr>
+        <tr>
+            <th>KG</th>
+            <th>Pounds</th>
+        </tr>
+        <tr>
+            <td>Ostrich</td>
+            <td>104(250)</td>
+            <td>156(350)</td>
+            <td>No</td>
+        </tr>
+        <tr>
+            <td>Somali Ostrich</td>
+            <td>194(350)</td>
+            <td style="color: red;">(Info Missing)</td>
+            <td>Yes</td>
+        </tr>
+        <tr>
+            <td>Parrot</td>
+            <td>10(26)</td>
+            <td>12(30)</td>
+            <td>Yes</td>
+        </tr>
+    </table>
+</body>
+</html>
