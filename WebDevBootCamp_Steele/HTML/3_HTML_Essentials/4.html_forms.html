@@ -3,9 +3,49 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>HTML Forms</title>
 </head>
 <body>
+    <h1>HTML Forms</h1>
+    <p>Form is a sort of a shell or a container, under which multiple elements are grouped under the 'Form' tags. These are individual input and button elements.</p>
+    <p>When we create form tags, we also get an attribute by the name of action - which primarily deals with where the data should be sent.</p>
+    <p>So when a form is submitted, a HTTP request is sent with the information that we are searching for and this information is then searched on the server and finally we get the result.</p>
     
+    <h3>Form Elements</h3>
+        <ol>
+            <li>
+                <b>Input Elements:</b> This element has no closing tag and has an attribute - type (which specifies how the input will behave) and placeholder (basically the text that is mentioned before user enters information).
+                <p><b>Input Types</b></p>
+                <ol>
+                    <li><b>text</b>: as the name specifies, takes text as input.</li>
+                    <li><b>password</b>: exactly as above, however, hides the text being written.</li>
+                    <li><b>color</b>: gives us a color picker.</li>
+                    <li><b>file</b>: gives option to upload a file.</li>
+                    <li><b>number</b>: takes a number as an input from a dropdown (depends upon browser).</li>
+                    <li><b>time</b>: time is taken as an input.</li>
+                </ol>
+                <p><b>Note:</b></p> 
+                <ol>
+                    <li>
+                        There are a lot of input types and the above list is not exhaustive. There are other such as range, etc. that shall be covered later.
+                    </li>
+                    <li>
+                        Placeholders does not work for a few elements such as date, time, colorpicker etc. This is because there is no option to show text due to the structure of these elements or due to the design of these elements.
+                    </li>
+                </ol>
+            </li>
+            <br>
+            <li>
+                <b>Label</b>: Text that defines the element details and is attached to the input section. If a user clicks on a label of the attached input, the input box becomes active. This is also good for the screen readers. 
+                <p>For label to work correctly, we need to mention for attribute in the label tag and then that same for attribute should be added as a id attribute in the input tag.</p> 
+            </li>
+        </ol>
+    <h3>Sample Form 1</h3>
+    <form action="#">
+        <input type="text" placeholder="Username">
+        <input type="password" placeholder="Password">
+        <input type="date">
+    </form>
+
 </body>
 </html>
