@@ -1,70 +1,120 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>HTML Forms</title>
 </head>
+
 <body>
     <h1>HTML Forms</h1>
-    <p>Form is a sort of a shell or a container, under which multiple elements are grouped under the 'Form' tags. These are individual input and button elements.</p>
-    <p>When we create form tags, we also get an attribute by the name of action - which primarily deals with where the data should be sent.</p>
-    <p>So when a form is submitted, a HTTP request is sent with the information that we are searching for and this information is then searched on the server and finally we get the result.</p>
-    
+    <p>Form is a sort of a shell or a container, under which multiple elements are grouped under the 'Form' tags. These
+        are individual input and button elements.</p>
+    <p>When we create form tags, we also get an attribute by the name of action - which primarily deals with where the
+        data should be sent.</p>
+    <p>So when a form is submitted, a HTTP request is sent with the information that we are searching for and this
+        information is then searched on the server and finally we get the result.</p>
+
     <h3>Form Elements</h3>
-        <ol>
-            <li>
-                <b>Input Elements:</b> This element has no closing tag and has an attribute - type (which specifies how the input will behave) and placeholder (basically the text that is mentioned before user enters information).
-                <p><b>Input Types</b></p>
-                <ol>
-                    <li><b>text</b>: as the name specifies, takes text as input.</li>
-                    <li><b>password</b>: exactly as above, however, hides the text being written.</li>
-                    <li><b>color</b>: gives us a color picker.</li>
-                    <li><b>file</b>: gives option to upload a file.</li>
-                    <li><b>number</b>: takes a number as an input from a dropdown (depends upon browser).</li>
-                    <li><b>time</b>: time is taken as an input.</li>
-                </ol>
-                <p><b>Note:</b></p> 
-                <ol>
-                    <li>
-                        There are a lot of input types and the above list is not exhaustive. There are other such as range, etc. that shall be covered later.
-                    </li>
-                    <li>
-                        Placeholders does not work for a few elements such as date, time, colorpicker etc. This is because there is no option to show text due to the structure of these elements or due to the design of these elements.
-                    </li>
-                </ol>
-            </li>
+    <ol>
+        <li>
+            <b>Input Elements:</b> This element has no closing tag and has an attribute - type (which specifies how the
+            input will behave) and placeholder (basically the text that is mentioned before user enters information).
+            <p><b>Input Types</b></p>
+            <ol>
+                <li><b>text</b>: as the name specifies, takes text as input.</li>
+                <li><b>password</b>: exactly as above, however, hides the text being written.</li>
+                <li><b>color</b>: gives us a color picker.</li>
+                <li><b>file</b>: gives option to upload a file.</li>
+                <li><b>number</b>: takes a number as an input from a dropdown (depends upon browser).</li>
+                <li><b>time</b>: time is taken as an input.</li>
+            </ol>
+            <p><b>Note:</b></p>
+            <ol>
+                <li>
+                    There are a lot of input types and the above list is not exhaustive. There are other such as range,
+                    etc. that shall be covered later.
+                </li>
+                <li>
+                    Placeholders does not work for a few elements such as date, time, colorpicker etc. This is because
+                    there is no option to show text due to the structure of these elements or due to the design of these
+                    elements.
+                </li>
+            </ol>
+        </li>
+        <br>
+        <li>
+            <b>Label</b>: Text that defines the element details and is attached to the input section. If a user clicks
+            on a label of the attached input, the input box becomes active. This is also good for the screen readers.
+            <p>For label to work correctly, we need to mention for attribute in the label tag and then that same for
+                attribute should be added as a id attribute in the input tag.</p>
+        </li>
+        <li>
+            <b>Button</b>: Buttons are common across applications, such as login, signup, search, and there are links
+            that also look like a button. A button has a opening and closing tag. Buttons basically submit the form.
+            Triggers the action basically. Otherwise not specified, by default the buttons simply submit the form, even
+            if we have 3 buttons. Similarly to inputs, we have types in buttons. These are:
+            <ol>
+                <li>
+                    <b>button</b>: This type behave like a simple button and not a submit button.
+                </li>
+                <li>
+                    <b>submit</b>: Type to submit the button.
+                </li>
+            </ol>
+            <b>Note:</b> Sometimes we will have input type as submit, not very regular. Here, we will have to add an
+            attribute name value and under this we can decide on the text to be written on the button.
+        </li>
+        <li>
+            <b>Name</b>: name is an input attribute, that tells where this data should be submitted to or queried from
+            in the server. If we add a name, example username for input username and add value to username form and
+            click on submit, we will see the information of username being submitted in the URL. <br>
+            <img src="Screenshot 2024-09-08 at 5.15.37 PM.png" alt="">
             <br>
-            <li>
-                <b>Label</b>: Text that defines the element details and is attached to the input section. If a user clicks on a label of the attached input, the input box becomes active. This is also good for the screen readers. 
-                <p>For label to work correctly, we need to mention for attribute in the label tag and then that same for attribute should be added as a id attribute in the input tag.</p> 
-            </li>
-        </ol>
+            This is basically the name that will be used to send data to the server. This must be added to all the input
+            fields and will tell the server what this is data is all about.
+            <br>
+            One thing that we noticed that the password is visible in the browser. This shall be changed later.
+        </li>
+        <li>
+            <b>Checkbox</b>: Works on the basis of types only, with type being a checkbox. Also, we can a checkbox
+            clicked by default or not. if we want the box to be clicked by default, we simply need to type checked in
+            the tag, without inverted commas. In case of submission, if a checkbox is selected, data is sent as on.
+        </li>
+        <li>
+            <b>Radiobutton</b>: Similar to checkboxes, however, in the given options, only one option can be selected.
+            The type is simple: radio. To combine these buttons together, we need to give them the same name. However,
+            to finalise which value should be submitted from the options in the radio, we need to add an attribute
+            value. Value will not be displayed to the user, however, this shall be added to the information being sent
+            to the server,
+        </li>
+    </ol>
     <h3>Sample Form 1</h3>
-    <form action="#">
+    <form action="/formaction">
         <table>
             <tr>
                 <td>
                     <label for="username">Enter your username</label>
                 </td>
                 <td>
-                    <input type="text" placeholder="Username" id = "username">
+                    <input type="text" placeholder="Username" id="username" name="username">
                 </td>
             </tr>
             <tr>
                 <td>
                     <label for="password">Enter your Password</label>
                 </td>
-                <td>   
-                    <input type="password" placeholder="Password" id = "password">
+                <td>
+                    <input type="password" placeholder="Password" id="password" name="password">
                 </td>
             </tr>
             <tr>
                 <td>
-                    <label for="date">Select start date</label>    
+                    <label for="date">Select start date</label>
                 </td>
                 <td>
-                    <input type="date" id = "date">
+                    <input type="date" id="date">
                 </td>
             </tr>
             <tr>
@@ -73,14 +123,55 @@
             </tr>
             <tr>
                 <td>
-                    <button>Submit</button>
+                    <button type="submit">Submit</button>
                 </td>
                 <td>
-                    <button>Register</button>
+                    <button type="button">Register</button>
                 </td>
             </tr>
         </table>
     </form>
+    <h3>Sample Website Forms</h3>
+    <h4>Google Form</h4>
+    <p>First lets note down the details of a simple google form:</p>
+    <img src="Screenshot 2024-09-08 at 5.25.32 PM.png" alt="">
+    <p>Now in this image above, we have the following details:</p>
+    <ol>
+        <li>Form action: google.com/search</li>
+        <li>name of the button is q</li>
+        <li>This is followed by the search term</li>
+    </ol>
+    <p>Now lets create a form on the same:</p>
+    <form action="https://www.google.com/search">
+        <input type="text" name="q">
+        <button type="submit">Submit</button>
+    </form>
+    <p>Here's the result of the last form when we added google as the search term</p>
+    <img src="Screenshot 2024-09-08 at 5.30.12 PM.png" style="width: 700px;" alt="">
+    <h4>Youtube Search</h4>
+    <p>You tube search details are: https://www.youtube.com/results?search_query=computer</p>
+    <form action="https://www.youtube.com/results">
+        <input type="text" name="search_query">
+        <button type="submit">Submit on Youtube</button>
+    </form>
+    <p>And the above two searches work on the respective websites.</p>
 
+    <h3>Form 3</h3>
+    <p>Form with more elements such as checkbox, radio, dropdowns etc.</p>
+    <form action="/input">
+        <label for="check1">Check1</label>
+        <input type="checkbox" name="check1" id="check1" checked><br>
+        <label for="check2">Check2</label>
+        <input type="checkbox" name="check2" id="check2"><br>
+        <p>Select your zodiac sign:</p>
+        <label for="radio1">Aquarius</label>
+        <input type="radio" name="zodiac" id="radio1" value="Aquarius"><br>
+        <label for="radio2">Leo</label>
+        <input type="radio" name="zodiac" id="radio2" value="Leo"><br>
+        <label for="radio3">Libra</label>
+        <input type="radio" name="zodiac" id="radio3" value="Libra"><br>
+        <button>Submit</button>
+    </form>
 </body>
+
 </html>
