@@ -89,6 +89,14 @@
             value. Value will not be displayed to the user, however, this shall be added to the information being sent
             to the server,
         </li>
+        <li>
+            <b>Select Element (dropdown)</b>: Has a label, then select tag, followed by option tags containing all the
+            options that we will have under the dropdown.
+        </li>
+        <li>
+            <b>Range & Text Area</b>: Range is meant for selecting a range using a slider. text area is for taking a
+            larger input from the user.
+        </li>
     </ol>
     <h3>Sample Form 1</h3>
     <form action="/formaction">
@@ -170,6 +178,18 @@
         <input type="radio" name="zodiac" id="radio2" value="Leo"><br>
         <label for="radio3">Libra</label>
         <input type="radio" name="zodiac" id="radio3" value="Libra"><br>
+        <button>Submit</button>
+    </form>
+
+    <h3>Form 4</h3>
+    <form action="/dropinfo">
+        <label for="dropdown">Select a Suitable Option:</label>
+        <select name="dropdown" id="dropown">
+            <option value="Value1">Value 1</option>
+            <option value="Value2">Value 2</option>
+            <option value="Value3">Value 3</option>
+            <option value="Value4">Value 4</option>
+        </select>
         <button>Submit</button>
     </form>
 </body>
