@@ -1,4 +1,4 @@
-p {
+.css1 {
     color: darkblue;
 }
 
@@ -17,4 +17,22 @@ button {
 
 .lorem1 {
     width: 50%;
+}
+
+#diff_button {
+    background-color: red;
+}
+
+.noinfo {
+    color: grey;
+    background-color: lightsalmon;
+}
+
+ul a {
+    color: white;
+    background-color: black;
+}
+
+a {
+    text-decoration: none;
 }

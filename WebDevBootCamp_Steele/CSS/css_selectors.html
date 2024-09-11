@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Selectors</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <h1>CSS Selectors</h1>
+
+    <p>Selecting by an element is something that we have already covered in the previous segment. However, there are a
+        specific set of selectors that help us in style only specific elememts, example: only a couple of buttons on a
+        page containing half a dozen buttons.</p>
+    <p>*: Star is also known as an universal selector, hence covers every element in HTML. It is not a good idea usually
+        to use this to use styles. </p>
+    <p>We can also use a comma to combine multiple selectors, such as h1, h1 {} can be used to style h1 and h2
+        simultaneously. </p>
+    <h3>Important & Most commonly used Selectors:</h3>
+    <ol>
+        <li>
+            <b>ID Selector:</b> We had earlier used ID to combine inputs with labels. Similarly, we can use ID to select
+            a specific element in CSS. ID is used when we have to style a specific single element. Such as a single
+            button has to be distinguished and given a different background color. Only one thing on a page should have
+            only one ID. Below's an example: <br>
+            <button>Button</button><br>
+            <button>Button</button><br>
+            <button id="diff_button">Different Button</button><br>
+            <button>Button</button><br>
+            <p>In the above example we can see that buttons have a default styling, however, only one button (different
+                button) has an ID attached to it and basis that we have been able to style it differently as compared to
+                the other buttons.</p>
+        </li>
+        <li>
+            <b>Class Selector</b>: It is similar idea as ID, however, the only difference is that it can be applied to
+            multiple elements. For example, if there is a repeated pattern, such as on a social media webpages, there
+            are multiple H3's including the profile names on the wall and other headings. Now, to separate, if we want
+            to style the profile names separately, we can use class. Instead of using #idname, we use .classname as the
+            selector in css.
+            <p>Here's an example below. In the table below, we have multiple entries, however, there are a few empty
+                entries, here we have colored them grey to show these have no data. This we have done using spans then
+                assigning a class to the span.</p>
+            <table>
+                <thead>
+                    <tr>
+                        <th>S.No</th>
+                        <th>Heading 1</th>
+                        <th>Heading 2</th>
+                        <th>Heading 3</th>
+                    </tr>
+                <tbody>
+                    <tr>
+                        <td>1</td>
+                        <td><span class="noinfo">No Info</span></td>
+                        <td>12</td>
+                        <td>13</td>
+                    </tr>
+                    <tr>
+                        <td>2</td>
+                        <td>21</td>
+                        <td>22</td>
+                        <td><span class="noinfo">No Info</span></td>
+                    </tr>
+                    <tr>
+                        <td>3</td>
+                        <td>31</td>
+                        <td><span class="noinfo">No Info</span></td>
+                        <td>33</td>
+                    </tr>
+                    <tr>
+                        <td>4</td>
+                        <td>41</td>
+                        <td><span class="noinfo">No Info</span></td>
+                        <td>43</td>
+                    </tr>
+                </tbody>
+                </thead>
+            </table>
+        </li>
+        <li>
+            <b>Descendant Selector</b>: Using a space, we can nest one element inside another element to select only
+            that specific element. For example, below we have a few anchor tags. Header tags, then list tags and finally
+            footer tags. You want to only style unordered-list anchor tags. For this, we can use ul a{} as the selector,
+            as seen
+            below, we have different styling.
+
+            <div><a href="">Header Anchor 1</a></div>
+            <div><a href="">Header Anchor 2</a></div>
+            <div><a href="">Header Anchor 3</a></div>
+            <ul>
+                <li>
+                    <a href="">List Anchor 1</a>
+                </li>
+                <li>
+                    <a href="">List Anchor 1</a>
+                </li>
+                <li>
+                    <a href="">List Anchor 1</a>
+                </li>
+                <li>
+                    <a href="">List Anchor 1</a>
+                </li>
+            </ul>
+            <div><a href="">Footer Anchor 1</a></div>
+            <div><a href="">Footer Anchor 2</a></div>
+            <div><a href="">Footer Anchor 3</a></div>
+        </li>
+    </ol>
+</body>
+
+</html>
