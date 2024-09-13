@@ -40,3 +40,19 @@ a {
 h3+p {
     background-color: orange;
 }
+
+section>a {
+    color: blueviolet;
+}
+
+input[type="text"] {
+    color: red;
+}
+
+.nav {
+    width: 300px;
+}
+
+.nav2 {
+    width: 400px;
+}

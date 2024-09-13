@@ -9,6 +9,25 @@
 </head>
 
 <body>
+    <nav>
+        <table class="nav">
+            <tr>
+                <td><b><a
+                            href="/Users/vaibhav/Library/Mobile Documents/com~apple~CloudDocs/Programming/100xDevs/WebDevBootCamp_Steele/HTML/3_HTML_Essentials/1.html">HTML</a></b>
+                </td>
+                <td><b><a href="intro_css.html">CSS</a></b></td>
+            </tr>
+        </table>
+        <hr>
+        <table class="nav2">
+            <tr>
+                <td><b>CSS Topics:</b></td>
+                <td><a href="intro_css.html">1. Intro to CSS</a></td>
+                <td><a href="css_selectors.html">2. CSS Selectors</a></td>
+            </tr>
+        </table>
+        <hr>
+    </nav>
     <h1>CSS Selectors</h1>
 
     <p>Selecting by an element is something that we have already covered in the previous segment. However, there are a
@@ -32,7 +51,7 @@
             <p>In the above example we can see that buttons have a default styling, however, only one button (different
                 button) has an ID attached to it and basis that we have been able to style it differently as compared to
                 the other buttons.</p>
-        </li>
+        </li><br>
         <li>
             <b>Class Selector</b>: It is similar idea as ID, however, the only difference is that it can be applied to
             multiple elements. For example, if there is a repeated pattern, such as on a social media webpages, there
@@ -78,7 +97,7 @@
                 </tbody>
                 </thead>
             </table>
-        </li>
+        </li><br>
         <li>
             <b>Descendant Selector</b>: Using a space, we can nest one element inside another element to select only
             that specific element. For example, below we have a few anchor tags. Header tags, then list tags and finally
@@ -106,14 +125,50 @@
             <div><a href="">Footer Anchor 1</a></div>
             <div><a href="">Footer Anchor 2</a></div>
             <div><a href="">Footer Anchor 3</a></div>
-        </li>
-        <li> <b>Adjacent Selectors</b>: Use + sign between two elements
+        </li><br>
+        <li> <b>Adjacent Selectors</b>: Use + sign between two elements. This will only add style to the very next
+            element adjacent to the first element. For example, below, we have used h3 + p as the selector. Now,
+            following the H3 below, we have 2 paras, 1 div with p inside and then another p. By using this selector
+            option, only the p followed by h3 gets styled differently, hence the name adjacent.
             <h3>Sample H3</h3>
             <p>Sample Paragraph after H3 and before div</p>
+            <p>Sample Paragraph 2 after H3 and before div</p>
             <div>
                 <p>Sample Paragraph inside a div</p>
             </div>
             <p>Sample Paragraph after div</p>
+        </li>
+        <li>
+            <b>Direct Child</b>: Using a '>' sign we can add a direct child of an element. Below we have a section
+            element, followed by 2 anchors which are inside the section. Then we have 2 divs with 1 anchor each and
+            again we have one anchor. Now in this case, the anchor tags outside the divs and the divs themselves are the
+            direct children of the section tag. So, if we only want to style the anchor tags that are direct children of
+            the section, we can use 'section > a {}' as the selector.
+            <section>
+                <a href="#">Anchor Direct 1</a><br>
+                <a href="#">Anchor Direct 2</a>
+                <div>
+                    <a href="#">Anchor Inside Div 1</a>
+                </div>
+                <div>
+                    <a href="#">Anchor Inside Div 2</a>
+                </div>
+                <a href="#">Anchor Direct 3</a>
+            </section>
+            This is not as commonly used as others, but is still useful.
+        </li><br>
+        <li>
+            <b>Attribute Selector</b>: Where we can style elements on the basis of their attributes. For example, in
+            input types, we have multiple attributes. Below we have multiple such input types. However, we are only
+            going to select attribute text in the below case to style. Type in these inputs to check the difference.<br>
+            text (Styled)): <input type="text" name="" id=""><br>
+            password (Not Styled)): <input type="password" name="" id=""><br>
+            email (Not Styled)): <input type="email" name="" id=""><br>
+            text (Styled)): <input type="text" name="" id=""><br>
+            date (Not Styled)): <input type="date" name="" id=""><br>
+            <b>Note</b>: The syntax to for attribute selector is a lil different from other selector. For our above
+            example we shall be using: 'input[type = "text"] {}' as our selector. See the text color of the text
+            selectors above.
         </li>
     </ol>
 </body>
