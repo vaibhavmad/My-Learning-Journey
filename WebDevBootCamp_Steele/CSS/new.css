@@ -9,3 +9,15 @@
 .styled {
     color: brown;
 }
+
+.nav,
+a {
+    text-decoration: none;
+    width: 300px;
+}
+
+.nav2,
+a {
+    text-decoration: none;
+    width: 800px;
+}

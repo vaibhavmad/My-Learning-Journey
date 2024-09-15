@@ -1,7 +1,135 @@
-.nav {
+.nav,
+a {
+    text-decoration: none;
     width: 300px;
 }
 
-.nav2 {
+.nav2,
+a {
+    text-decoration: none;
     width: 800px;
+}
+
+.outer {
+    display: inline-flex;
+    justify-content: center;
+}
+
+.one {
+    width: 300px;
+    height: 200px;
+    background-color: lightblue;
+    margin-right: 10px;
+}
+
+.two {
+    width: 400px;
+    height: 150px;
+    background-color: lightcyan;
+    margin-right: 10px;
+}
+
+.three {
+    width: 550px;
+    height: 100px;
+    background-color: bisque;
+}
+
+.border-div {
+    display: inline-flex;
+    justify-content: center;
+}
+
+.border-one {
+    border-color: black;
+    border-width: 5px;
+    border-style: solid;
+    width: 200px;
+    height: 200px;
+    margin-right: 10px;
+}
+
+.border-three {
+    border-color: black;
+    border-width: 5px;
+    border-style: solid;
+    width: 190px;
+    height: 190px;
+    margin-right: 10px;
+}
+
+.border-four {
+    border-color: green;
+    border-width: 10px;
+    border-style: double;
+    width: 200px;
+    height: 200px;
+    box-sizing: border-box;
+    margin-right: 10px;
+}
+
+.border-five {
+    border: 10px green groove;
+    width: 200px;
+    height: 200px;
+    margin-right: 10px;
+}
+
+.border-two {
+    background-color: lightblue;
+    width: 200px;
+    height: 200px;
+    margin-right: 10px;
+}
+
+.round {
+    color: white;
+    padding-left: 5px;
+    width: 100px;
+    height: 30px;
+    background-color: blue;
+    border-radius: 10px;
+}
+
+.padding-box {
+    display: inline-flex;
+}
+
+.padded-box-1 {
+    /* width: 100px;
+    height: 100px; */
+    text-align: center;
+    background-color: black;
+    color: white;
+    margin-right: 10px;
+}
+
+.padded-box-2 {
+    /* width: 100px;
+    height: 100px; */
+    padding: 20px;
+    text-align: center;
+    background-color: black;
+    color: white;
+    margin-right: 10px;
+}
+
+.padded-box-3 {
+    /* width: 100px;
+    height: 100px; */
+    padding-left: 20px;
+    text-align: center;
+    background-color: black;
+    color: white;
+    margin-right: 10px;
+}
+
+.padded-box-4 {
+    /* width: 100px;
+    height: 100px; */
+    padding-bottom: 20px;
+    text-align: center;
+    background-color: black;
+    color: white;
+    margin-right: 10px;
 }

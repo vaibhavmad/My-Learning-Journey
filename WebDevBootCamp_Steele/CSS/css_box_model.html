@@ -27,6 +27,7 @@
                 <td><a href="css_selectors.html">2. CSS Selectors</a></td>
                 <td><a href="cascade_in_css.html">3. Cascade & Specificity</a></td>
                 <td><a href="css_box_model.html">4. CSS Box Model</a></td>
+                <td><a href="display.html">5. Display Property</a></td>
             </tr>
         </table>
         <hr>
@@ -42,18 +43,123 @@
     </ol>
     <p>The outer most layer is margin, followed by border, which further contains padding and finally we have Inner
         Content box. </p>
+    <h2>1. Inner Content Box</h2>
     <p>For inner content box, we can use width & height to control its size. Below are some examples.</p>
-    <div class="one">Lorem ipsum dolor sit amet consectetur adipisicing elit. Tenetur quos maiores optio voluptatibus,
-        alias error
-        magnam voluptas consequatur. Ipsum, possimus deleniti labore illum pariatur reiciendis voluptatibus magnam eaque
-        non eos?</div>
-    <div class="two">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Distinctio sapiente voluptatibus quam
-        sunt, error
-        odit omnis nemo non alias rem ex sit, dicta eligendi possimus dolore mollitia est! Officia, ab!</div>
-    <div class="three">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nulla consectetur dolorem nesciunt ad
-        rem aspernatur
-        itaque perspiciatis commodi, quaerat minima vero omnis mollitia, voluptates eligendi necessitatibus, natus enim.
-        Itaque, perspiciatis!</div>
+    <div class="outer">
+        <div class="one">
+            <h4>Box 1: Width: 300px, Height: 200px</h4>Lorem ipsum dolor sit amet consectetur adipisicing elit. Tenetur
+            quos
+            maiores optio voluptatibus, alias error magnam voluptas consequatur. Ipsum, possimus deleniti labore illum
+            pariatur reiciendis voluptatibus magnam eaque non eos?
+        </div>
+        <div class="two">
+            <h4>Box 2: Width: 400px, Height: 150px</h4>Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+            Distinctio
+            sapiente voluptatibus quam
+            sunt, error
+            odit omnis nemo non alias rem ex sit, dicta eligendi possimus dolore mollitia est! Officia, ab!
+        </div>
+        <div class="three">
+            <h4>Box 3: Width: 500px, Height: 100px</h4>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nulla
+            consectetur dolorem nesciunt adrem aspernatur itaque perspiciatis commodi, quaerat minima vero omnis
+            mollitia, voluptates eligendi necessitatibus, natus
+            enim. Itaque, perspiciatis!
+        </div>
+    </div>
+    <br>
+    <h2>2. Border & Border Radius</h2>
+    <p>
+        There are many border related properties. Borders play an important role in bringing attention to some elements.
+        The main properties are: border-width, border-color & border-style. These are the basic properties of a border
+        and all three are needed in order to show the border. Below are examples of different border
+        types. All three values can also be provided in one parameter <b>[border: medium dashed green;] {Box 5
+            below}</b>.
+    </p>
+    <div class="border-div">
+        <div class="border-one">
+            <strong>Box 1</strong><br>
+            border-color: black;<br>
+            border-width: 5px;<br>
+            border-style: solid;<br>
+            width: 200px;<br>
+            height: 200px;<br>
+        </div>
+        <div class="border-two">
+            <strong>Box 2</strong>
+            NO BORDER
+            background-color: lightblue;
+            width: 200px;
+            height: 200px;
+        </div>
+        <div class="border-three">
+            <strong>Box 3</strong><br>
+            border-color: black;<br>
+            border-width: 5px;<br>
+            border-style: solid;<br>
+            width: 190px;<br>
+            height: 190px;<br>
+        </div>
+        <div class="border-four">
+            <strong>Box 4</strong>
+            border-color: green;<br>
+            border-width: 10px;<br>
+            border-style:double;<br>
+            width: 200px;<br>
+            height: 200px;<br>
+            box-sizing: border-box <br>
+        </div>
+        <div class="border-five">
+            <strong>Box 5</strong>
+            border: 10px green groove;<br>
+            width: 200px;<br>
+            height: 200px;<br>
+        </div>
+    </div>
+    <p><b>Note</b>: In the above example we can see that even though the width and height of both the boxes is same,
+        still Box 1 is bigger than Box2. So, here the key point to be observed is that border width, has been added over
+        and above the dimensions of the inner box. Therefore, box 3, which has an inner content dimensions of 190px X
+        190px, is equally sized to the non border box, as the overall dimensions are same.</p>
+    <p>
+        This point clearly shows that border dimensions are over and above the inner box dimensions. However, the same
+        can be corrected, meaning the border and the innercontent can be given one dimension, instead of two, by adding
+        another property - <b>[box-sizing]</b> and giving it the value of <b>[border-box]</b>. This can be seen in the
+        fourth box. Here, we have border width of 20px and box width of 200px, however, the total box width is also
+        200px and not 220px.
+    </p>
+    <p><b>Note</b>: Also note that while we have applied these properties to all sides, these properties can be
+        individually decalred for each side specifically as well.</p>
+
+    <h3>2.1 Border radius</h3>
+    <p>We often come across a lot of elements wrapped inside borders, however, these borders are rounded at the edges.
+        Example below:</p>
+    <div class="round">
+        rounded box
+    </div>
+    <p>This is a common trick to add borders and also creating circular elements. Like border, this can be set across
+        for the edges separately or at once.</p>
+    <h2>3. Padding</h2>
+    <p>The space between the inner content and the border. Can be added to all sides at once or can be done separately
+        for each side depending upon the requirements. Below are some examples:</p>
+    <div class="padding-box">
+        <div class="padded-box-1">
+            No Padding
+        </div>
+        <div class="padded-box-2">
+            padding: 20px
+        </div>
+        <div class="padded-box-3">
+            padding-left: 20px
+        </div>
+        <div class="padded-box-4">
+            padding-bottom: 20px
+        </div>
+    </div>
+    <p> <b>Note</b>: We have a shorthand to set padding separately for all 4 sides as well, it is simple: padding:
+        20px(top) 20px(right) 20px(bottom) 20px(left) or padding: 20px(top and bottom) 20px(right and left).</p>
+    <h2>4. Margin</h2>
+    <p>Same as the padding, all same shorthand and properties, however, only difference is that is works for setting up
+        the space outside the border and other elements, while padding is inside the border sandwiched between border
+        and inner content.</p>
 </body>
 
 </html>
