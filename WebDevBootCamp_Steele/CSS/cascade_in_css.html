@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cascade in HTML</title>
+    <link rel="stylesheet" href="new.css">
+</head>
+
+<body>
+    <nav></nav>
+    <table class="nav">
+        <tr>
+            <td><b><a
+                        href="/Users/vaibhav/Library/Mobile Documents/com~apple~CloudDocs/Programming/100xDevs/WebDevBootCamp_Steele/HTML/3_HTML_Essentials/1.html">HTML</a></b>
+            </td>
+            <td><b><a href="intro_css.html">CSS</a></b></td>
+        </tr>
+    </table>
+    <hr>
+    <table class="nav2">
+        <tr>
+            <td><b>CSS Topics:</b></td>
+            <td><a href="intro_css.html">1. Intro to CSS</a></td>
+            <td><a href="css_selectors.html">2. CSS Selectors</a></td>
+            <td><a href="cascade_in_css.html">3. Cascade & Specificity</a></td>
+        </tr>
+    </table>
+    <hr>
+    </nav>
+    <h1>Cascade & Specificity in CSS</h1>
+    <h3>Cascade</h3>
+    <p>The order the styles are declared in matters or the order that information is accessed by browsers in CSS.</p>
+    <p>If we have one H1 in HTML, however if we have three styles for it, in the stylesheet, then the last one will be
+        applied incase the styles declared are of the same type.</p>
+    <p>Example: below we have an H4 and we have applied three styles to the text color in this case. Let's see which one
+        gets applied. We have applied three colors starting with aqua, then blue and finally brown.</p>
+    <h4 class="styled">Sample Styled H3</h4>
+    <p>As we can see above, the last one, i.e brown is applied. So if multiple conflicting styles are declared for a
+        single element, in that case the last style in the cascade (think of cascade like stairs, comes from top to
+        bottom and applied whats present at the end), gets applied to the element.</p>
+    <p>Cascading also matters in the order of link tags in the HTML boilerplate. Of a link is below, it will get more
+        preference. </p>
+    <h3>Specificity</h3>
+    <p>While in order, for the same selector, last one applies. If we use different selectors for the same element,
+        then specificity comes in to the picture.</p>
+    <p>Specificity is a set of rules which are applied by the browser in case of a conflict when different selectors
+        declare same style type for same elements. It is decided on how specific a given selector is. In case of
+        specificity the formula is: 'ID' > 'Class, Attribute, Preudo-Class' > 'Element and Pseudo Element'. To know more
+        about this, we can search for specificity calculator by Keegan Street. No need to learn all of it at this
+        moment, we shall learn this with practice.</p>
+
+    <h3>Inline Styles</h3>
+    <p>These are the most specific that specificity and cascading. inline style is basically adding some style in the
+        HTML code itself. So, this should be avoided.</p>
+
+    <h3>!important</h3>
+    <p>Something that can be used on individual elements. If we add this to a declaration after the declared value, then
+        this is given the most importance by the browser, even above an ID. This is something that can be used in
+        imported or external library.</p>
+    <h3>CSS Inheritance</h3>
+    <p>Some CSS properties are inherited by the child elements. For example, adding a color to body, will add that text
+        color to all the elements on the page. Also, certain elements do not inherit styles by default and for this we
+        can set that style as inherit. Such as color: inherit; and this element now shall inherit the details from the
+        parent.</p>
+</body>
+
+</html>

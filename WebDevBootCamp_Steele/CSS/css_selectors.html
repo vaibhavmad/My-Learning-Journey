@@ -24,6 +24,7 @@
                 <td><b>CSS Topics:</b></td>
                 <td><a href="intro_css.html">1. Intro to CSS</a></td>
                 <td><a href="css_selectors.html">2. CSS Selectors</a></td>
+                <td><a href="cascade_in_css.html">3. Cascade & Specificity</a></td>
             </tr>
         </table>
         <hr>
@@ -161,14 +162,109 @@
             <b>Attribute Selector</b>: Where we can style elements on the basis of their attributes. For example, in
             input types, we have multiple attributes. Below we have multiple such input types. However, we are only
             going to select attribute text in the below case to style. Type in these inputs to check the difference.<br>
-            text (Styled)): <input type="text" name="" id=""><br>
-            password (Not Styled)): <input type="password" name="" id=""><br>
-            email (Not Styled)): <input type="email" name="" id=""><br>
-            text (Styled)): <input type="text" name="" id=""><br>
-            date (Not Styled)): <input type="date" name="" id=""><br>
+            text (Styled - type in box to check): <input type="text" name="" id=""><br>
+            password (Not Styled): <input type="password" name="" id=""><br>
+            email (Not Styled): <input type="email" name="" id=""><br>
+            text (Styled): <input type="text" name="" id=""><br>
+            date (Not Styled): <input type="date" name="" id=""><br>
             <b>Note</b>: The syntax to for attribute selector is a lil different from other selector. For our above
             example we shall be using: 'input[type = "text"] {}' as our selector. See the text color of the text
             selectors above.
+            <p>There are other variations of this selector, where we can use * (to check for a specific word in the
+                attribute), or a dollar sign. For more, please check on MDN attribute selector page.</p>
+        </li>
+    </ol>
+    <h3>Pseudo Classes</h3>
+    <p>Keywords that we add to the selector that modify and specify a particular state of a particular elements. Such as
+        a check box that has been checked or if we are hovering on top of an anchor tag.</p>
+    <p>There are multiple pseudo classes, here, however we shall cover the most common ones. Point to be noted is that
+        pseudo classes start with a colon(:), so signify that we are using a pseudo class. The most common ones are:</p>
+    <ol>
+        <li>
+            <b>: hover</b>: Hover is going to modify our selection, when the cursor is hovering over an element. To show
+            how it works, lets create few buttons below under a section with class hover and a few buttons outside the
+            section.
+            <section class="hover">
+                <button>New Button 1</button><br>
+                <button>New Button 2</button><br>
+                <button>New Button 3</button><br>
+                <button>New Button 4</button><br>
+            </section>
+            <button>Button 1 Outside Section</button><br>
+            <button>Button 2 Outside Section</button><br>
+            <button class="active">Button 3 Outside Section</button><br>
+        </li>
+        <li>
+            <b>: active</b>: When the button is active. Or is clicked. Click on above button 3 outside.
+        </li>
+        <li>
+            <b>: checked</b>: When radio or checkboxes are checked.
+        </li>
+        <li>
+            <b>: nth-of-type</b>: if there are multiple elements of the same type and we want to something to every
+            second or every fifth, this is what we need to use. Here an attribute has to be added element:nth-of-type(3)
+            shall get the third of the element, however, if we use element:nth-of-type(3n) shall add styles to every
+            third. For more pseudo classes, check this <a
+                href="https://developer.mozilla.org/en-US/docs/Web/CSS/Pseudo-classes">page</a> .
+        </li>
+    </ol>
+    <h3>Pseudo Elements</h3>
+    <p>These are keywords that we add on to selectors, that shall change a particular part of the selected element.
+        There are some experimental such elements and should not be used in production code as per MDN. Ideally we
+        should use two colons (::) to highlight this, however, most of browsers accept (:). The popular ones
+        are:</p>
+    <ol>
+        <li>
+            <b>::after</b>: The ::after selector inserts something after the content of each selected element(s).
+            Example, we have a paragraph below and we are going to add some information after this paragraph.
+            <section class="after">
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Recusandae sapiente corrupti officia iusto
+                    quae maiores blanditiis nemo dolores enim tenetur. Eos omnis earum error eveniet dicta praesentium
+                    saepe dolorum accusantium!</p>
+            </section>
+        </li>
+        <li>
+            <b>::before</b>: Before is same like after.
+        </li>
+        <li>
+            <b>::first-letter</b>: To select the first letter of any element. Below we have 4 paragraphs under section
+            with class first-letter. We will be styling only the first letter here.
+            <section class="first-letter">
+                <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Alias, unde itaque quibusdam sint ullam
+                    dolore
+                    quaerat officiis pariatur veniam atque quo quam blanditiis, ea est nulla doloribus. Fugit, dolore
+                    officia.</p>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quam temporibus deleniti illum quia
+                    architecto
+                    voluptas illo delectus ullam dicta? Quisquam asperiores earum repellendus fugit molestias.
+                    Cupiditate,
+                    earum debitis! Ipsam, officiis!</p>
+                <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Perspiciatis voluptatem, quaerat autem qui
+                    deleniti, quia optio neque non vero nihil provident voluptates libero? Non libero nisi architecto
+                    nobis
+                    natus quo!</p>
+                <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Laborum reprehenderit odio natus accusamus
+                    doloremque error? Necessitatibus, molestiae. Eveniet consequuntur repellat animi sequi commodi quae.
+                    Rem, aliquid quisquam. Repellendus, hic totam?</p>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eos architecto perferendis a cumque ab
+                    veritatis
+                    fugiat ipsam nulla porro provident, iusto quis vero, fuga necessitatibus ducimus sit voluptatum,
+                    quidem
+                    nostrum.</p>
+            </section>
+        </li>
+        <li>
+            <b>::first-line</b>: Same as above, instead of first letter, change the first line.
+        </li>
+        <li>
+            <b>::selection</b>: When we select a text, we can add style to it. For example below is a paragraph, try
+            selecting it alongwith the other text on the page. the background color of this will be different from the
+            other.
+            <p class="select">
+                Lorem, ipsum dolor sit amet consectetur adipisicing elit. Explicabo ipsam recusandae sint fugiat vel
+                labore ea, adipisci quam quos quibusdam! Provident pariatur quidem vero quo. Voluptatibus culpa
+                consequuntur adipisci commodi.
+            </p>
         </li>
     </ol>
 </body>

@@ -54,5 +54,31 @@ input[type="text"] {
 }
 
 .nav2 {
-    width: 400px;
+    width: 800px;
+}
+
+section>button:hover {
+    background-color: white;
+    color: blue;
+    border-radius: 5px;
+}
+
+.active:active {
+    background-color: green;
+}
+
+.first-letter>p::first-letter {
+    font-size: bold;
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 40px;
+}
+
+.after>p::after {
+    content: "-Remember this";
+    color: red;
+    background-color: white;
+}
+
+.select::selection {
+    background-color: aqua;
 }
