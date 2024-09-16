@@ -5,6 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>CSS Units</title>
+    <link rel="stylesheet" href="units.css">
 </head>
 
 <body>
@@ -32,6 +33,185 @@
     <hr>
     </nav>
     <h1>CSS Units</h1>
+    <p>CSS units ar used to define the values around dimensions of various elements. So far we have majorly used px. As
+        discussed initially, there are two types of units: Absolute and Relative.</p>
+    <p><b>Absolute</b>: These units take up the given space independent of any other element, such as px, once defined
+        shall take up the given space of the defined pixels. Some other similar units are inches, mm, cm, etc. Other
+        than pixels, these are not used much.</p>
+    <p><b>Relative</b>: Relative as the name suggests, are in relation to something else, most of the time to the parent
+        element or in certain cases the element itself if we are trying to define an element based property such as
+        line-height. The most commonly used relative units are: percentages, em and rem. Lets go through these one by
+        one:</p>
+    <ol>
+        <li>
+            <b>Percentage</b>: It is denoted using % sign and is relative to either the parent or the element. We shall
+            cover both examples below.
+            <p>
+                Let's first look at the parent - child percentage. We shall create a div inside another div and define
+                width and height of the outer div in px and further define the inner in terms of the percentage. Here,
+                the inner one shall take the sizing in relation to the dimensions of the outer one.
+            </p>
+            <div class="outer-most">
+                <div class="wrapper">
+                    <div class="box1-outer">
+                        <div class="box1-inner">
+
+                        </div>
+                    </div>
+                    <p>
+                        <b>.box1-outer</b><br>
+                        background-color: aqua;<br>
+                        width: 200px;<br>
+                        height: 200px;<br>
+
+                        <b>.box1-inner</b><br>
+                        background-color: blueviolet;<br>
+                        width: 50%;<br>
+                        height: 50%;<br>
+                    </p>
+                </div>
+                <div>
+                    <div class="box2-outer">
+                        <div class="box2-inner">
+
+                        </div>
+                    </div>
+                    <p>
+                        <b>.box2-outer</b><br>
+                        background-color: aqua;<br>
+                        width: 200px;<br>
+                        height: 100px;<br>
+
+                        <b>.box2-inner</b><br>
+                        background-color: blueviolet;<br>
+                        width: 50%;<br>
+                        height: 50%;<br>
+                    </p>
+                </div>
+            </div>
+            <p>As we can see above, both the inner boxes have been given the exact same dimensions, however, since they
+                have relative units, their dimensions are in terms of the outer boxes and hence these are not equal to
+                each other. We shall become handy with this with more practise. So, no point in spending a lot of time
+                in getting the desired visual results. This is a simple and small part of being a developer. There are
+                more important things so we shall focus on them.</p>
+        </li>
+        <li>
+            <b>EM</b>: Written as em and is in relation to font-size and the element itself. A 1em means equal to the
+            parent and the child shall inherit exactly what parent is, however, a 2em will be twice the size of a
+            parent. Let us see an example of the same below. We have an article tag, inside the article we have two
+            para's. Now, the font size of the article is 20 px and of the two paragraphs is 2 em and 1 em. We can see
+            that the lower paragraph font size is smaller as compared to the first one.
+            <article id="art1">
+                <p id="p1">Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolore vero enim eligendi architecto
+                    possimus id consequatur eum. Recusandae veritatis blanditiis quod animi doloremque molestias sunt
+                    praesentium aliquam, rerum quo sequi?</p>
+                <p id="p2">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Voluptatibus, nihil iste quas illum
+                    sed voluptatum modi aspernatur, voluptatem architecto, facere quam accusantium similique totam
+                    excepturi delectus quia? Ratione, maxime corporis.</p>
+            </article>
+            <p>lets look at another example. We have two articles with one para each. The font size in the article one
+                is 10px and in second it is 20px. For the paragraphs, the font sizes are 1em each.</p>
+            <article id="art2">
+                <p id="p3">Lorem ipsum dolor sit amet consectetur adipisicing elit. Beatae, quis soluta doloribus
+                    consectetur
+                    pariatur numquam quaerat id adipisci. Voluptatem fugiat molestiae numquam eius ex officiis quisquam
+                    rem, ipsam blanditiis possimus?</p>
+            </article>
+            <article id="art3">
+                <p is="p4">Lorem ipsum dolor sit amet consectetur adipisicing elit. Necessitatibus dolorum, fuga et
+                    est
+                    autem
+                    deleniti quis qui laudantium veritatis eaque voluptatum repellendus, possimus cum minima. Sequi
+                    quos
+                    id sit. Reiciendis.</p>
+            </article>
+            <p>here, we can clearly see that children (paragraphs) have inherited the dimensions from the
+                parents(articles).</p>
+            <p><b>Note</b>: Here we also need to understand another factor of the em unit. We have just seen above that
+                a parent's dimensions are inherited by the child, for example the font-size as we just saw. However,
+                what about the properties of the child itself when declared using em. For example padding. In that case
+                it is inherited from the child.</p>
+            <p>Let us look at an example below:</p>
+            <p>We have an article, with font size 10px. Inside the article, we have a para, with font size of 2em. This
+                means that that the font size of the paragraph is 20px. Now, if we add padding to the paragraph, in this
+                case the em shall be inherited from the para font size. Meaning, 1em will be 20px and so on. Below is an
+                illustration of the same.</p>
+            <article id="art4">
+                <p id="p5">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Optio doloremque voluptate
+                    reprehenderit
+                    eum numquam aliquid. Delectus magni eos cum assumenda veniam necessitatibus possimus, saepe
+                    perspiciatis laboriosam omnis accusamus architecto eveniet!</p>
+            </article>
+            <p>The above is showing in the inspect SS of the browser as below:</p>
+            <div class="img_wrapper">
+                <img src="Screenshot 2024-09-16 at 12.45.35 PM.png" alt="">
+                <img src="Screenshot 2024-09-16 at 12.45.53 PM.png" alt="">
+            </div>
+            <h4>Advatanges of using Relative Units like em</h4>
+            <p>
+            <ul>
+                <li>
+                    This helps in a propotional development of the site. For example, if we are creating buttons by
+                    using px as the unit for everything, then while scaling up, the border, border radius, padding etc
+                    will remain as is even if the inner content font size is increased. However, if we do this using em,
+                    then just by changing the inner content font size, we can auto change the other elements as they are
+                    linked or are relative to the inner text.
+                </li>
+                <li>
+                    Another benefit is that if we set a standard for one of the elements like body or an outer most div
+                    or any other suitable semantic tag, and keep rest of the elements relative to the same, then we can
+                    control the look and feel of the content by just changing that outer layer details and also again
+                    all the content will be similar and standard in nature in terms of the size as everything will be
+                    linked.
+                </li>
+            </ul>
+            These two are the reasons that on most websites, we see em or % as the main units.
+            </p>
+        </li>
+        <li>
+            <b>REM</b>: While 'EM' has its advatages, it does comes with certain disadvantages as well. Let us first
+            look at the disadvatage.
+            <p>When we talk about em, we know that each child will inherit dimensions from the parent and then shall
+                convert it on the basis of n em units. If this n is 2, then the child will be twice the size of the
+                parent. While this is great and helps in improving efficieny, it also can be an issue sometimes. Below
+                we have a section, with font size defined as 5px. Inside we have a stacked ul. The entire ul is meant
+                to be 2em. Let's check how this pans out.</p>
+
+            <section id="list-sect">
+                <ul class="test-list">
+                    <li>Item 1</li>
+                    <ul class="test-list">
+                        <li>Item 1.1</li>
+                        <ul class="test-list">
+                            <li>Item 1.1.1</li>
+                            <li>Item 1.1.2</li>
+                            <li>Item 1.1.3</li>
+                        </ul>
+                        <li>Item 1.2</li>
+                        <li>Item 1.3</li>
+                    </ul>
+                    <li>Item 2</li>
+                    <li>Item 3</li>
+                    <li>Item 4</li>
+                </ul>
+            </section>
+            <p>We can clearly see that each child is relative to the parent and in this case, while the outer list is 10
+                px, each inner is doubling on it. This is one disadvatage of em when using with stacked elements.</p>
+            <p>This is where rem comes into the picture. rem means root em. So, now instead of inheriting the size from
+                documen root. The document root can be declared by using:</p>
+            html{<br>
+            font-size: 10px;<br>
+            } <br>
+
+            and now by using rem, we can make the dimensions relative to the root. This also helps in terms of the
+            standardization.
+            <p>
+                <b>Note</b>: While em and rem are both great, these are mostly used together. To inherit the
+                inner-content size, use rem, so as to keep it proportional and to now declare other elements that are
+                dependent on the inner content use rem.
+            </p>
+        </li>
+    </ol>
 
 </body>
 
