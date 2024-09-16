@@ -27,6 +27,7 @@
                 <td><a href="cascade_in_css.html">3. Cascade & Specificity</a></td>
                 <td><a href="css_box_model.html">4. CSS Box Model</a></td>
                 <td><a href="display.html">5. Display Property</a></td>
+                <td><a href="css_units.html">6. CSS Units</a></td>
             </tr>
         </table>
         <hr>
@@ -37,17 +38,47 @@
     <p>We know by default there are some inline and some block elements. This is something that we covered initially in
         CSS. Let's say we have two headings below with border and background color. Since these are block level
         elememts, this is how they get rendered in the browser.</p>
-    <h2>Sample H2</h2>
-    <h2>Another Sample H2</h2>
+    <h3>Sample H3</h3>
+    <h3>Another Sample H3</h3>
     <p>And then we have inline elements such as spans. Examples below:</p>
     <span>Sample Span</span>
     <span>Sample Span 2</span>
     <p>Now by using <b>inline</b> property we can change the behaviour of block level elements to behave like inline
-        elements. Here's an example using same elements as above:</p>
-    <h2 class="second">This is another H2</h2>
-    <h2 class="second">This is another H2</h2>
+        elements. Here's an example using same elements as above but display as inline:</p>
+    <h3 class="second">This is another H3</h3>
+    <h3 class="second">This is another H3</h3>
     <span>This is a span</span>
     <span>This is a span</span>
+    <p>Also, a point to be noted is that in case of inline elements, height and width is ignored whereas padding is
+        accepted, while margin is only accepted horizontally. Let's look at an examlpe of the same below:</p>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Illo aut natus, ea, dolores ipsum quae esse distinctio
+        eligendi unde tempora animi deserunt enim illum optio quibusdam qui voluptatem, veritatis eveniet.
+        Sapiente commodi ipsam aliquam eius eveniet voluptas, praesentium ratione autem eligendi deleniti hic repellat,
+        modi nesciunt exercitationem nostrum non cum accusamus facilis laboriosam fuga ut placeat accusantium culpa at?
+        Saepe?<span id="new-span">****I AM A SPAN****</span>. Temporibus aspernatur iure minus eligendi sequi veniam
+        ducimus
+        perspiciatis unde rerum enim eum voluptates tenetur accusantium a, nesciunt beatae amet tempore minima fuga!
+        Laborum culpa cupiditate, hic voluptatibus
+        aspernatur sint!</p>
+    <p>Now in the above span, we can see that the element is inline. In the CSS we have given this element the following
+        properties:</p>
+    width: 40px;<br>
+    height: 50px;<br>
+    padding: 20px;<br>
+    margin: 20px;<br>
+    <p>Now while we have given width, height, padding and margin to this property, only padding on all sides and margin
+        on
+        left and right sides have worked.left and right sides have worked.</p>
+    <h2>Inline-Block</h2>
+    <p>While inline elements only use the inner content width and height, however, if we want inline elements to respect
+        width and height, we need to use inline-block display type. In this case, the width and height shall be
+        respected as in the examlpe below:</p>
+    <div class="new-div"></div>
+    <div class="new-div"></div>
+    <div class="new-div"></div>
+    <p>The above 3 are div blocks, declared as inline-block elements and have been given a height and a width. While
+        these are acting like inline elements, however, they are also respecting the width and height that is given to
+        them.</p>
 </body>
 
 </html>
