@@ -1,0 +1,52 @@
+.nav,
+a {
+    text-decoration: none;
+    width: 300px;
+}
+
+.nav2,
+a {
+    text-decoration: none;
+    width: 1000px;
+}
+
+#div5 {
+    display: flex;
+}
+
+#div1 {
+    background-color: lightblue;
+    width: 150px;
+    height: 150px;
+    margin-right: 10px;
+}
+
+#div2 {
+    width: 50%;
+    height: 50%;
+    background-color: rgb(0, 128, 0);
+}
+
+#div3 {
+    background-color: lightblue;
+    width: 150px;
+    height: 150px;
+}
+
+#div4 {
+    width: 50%;
+    height: 50%;
+    background-color: rgba(0, 128, 0, 0.7);
+}
+
+#div6 {
+    background-color: lightblue;
+    width: 150px;
+    height: 150px;
+}
+
+#div7 {
+    width: 50%;
+    height: 50%;
+    background-color: rgba(0, 128, 0, 0.4);
+}

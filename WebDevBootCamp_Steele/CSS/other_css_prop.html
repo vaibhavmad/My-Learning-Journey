@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Other CSS Properties</title>
+    <link rel="stylesheet" href="other-css.css">
+</head>
+
+<body>
+    <nav>
+        <table class="nav">
+            <tr>
+                <td><b><a
+                            href="/Users/vaibhav/Library/Mobile Documents/com~apple~CloudDocs/Programming/100xDevs/WebDevBootCamp_Steele/HTML/3_HTML_Essentials/1.html">HTML</a></b>
+                </td>
+                <td><b><a href="intro_css.html">CSS</a></b></td>
+            </tr>
+        </table>
+        <hr>
+        <table class="nav2">
+            <tr>
+                <td><b>CSS Topics:</b></td>
+                <td><a href="intro_css.html">1. Intro to CSS</a></td>
+                <td><a href="css_selectors.html">2. CSS Selectors</a></td>
+                <td><a href="cascade_in_css.html">3. Cascade & Specificity</a></td>
+                <td><a href="css_box_model.html">4. CSS Box Model</a></td>
+                <td><a href="display.html">5. Display Property</a></td>
+                <td><a href="css_units.html">6. CSS Units</a></td>
+                <td><a href="other_css_prop.html">7. Other CSS Properties</a></td>
+            </tr>
+        </table>
+        <hr>
+    </nav>
+    <h1>Other CSS Properties</h1>
+    <h3>Index</h3>
+    <ol>
+        <li>Opacity & The Alpha Channel: Important</li>
+        <li>Position Property: Crucial</li>
+        <li>CSS Transitions: Crucial</li>
+        <li>CSS Transforms: Nice to have</li>
+        <li>Background Revisited: Important</li>
+        <li>Google Fonts: Important</li>
+    </ol>
+    <h2>Opacity & Alpha Channel</h2>
+    <ol>
+        <li><b>Alpha Channel</b>: Alpha channel deals with transparency. We have read about rgb color scheme. In rgba we
+            add another element 'a' and make it rgba. Now, a here stands for alpha channel. It's value is from 0 to 1. O
+            being transparent and 1 being zero transparency.
+            <p>We can see an example below. We have two divs containing one div each. The first parent div has a non
+                transparent internal div, while in the second case, the alpha channel is set to 0.7 for the inner div.
+            </p>
+            <div id="div5">
+                <div id="div1">
+                    <div id="div2">
+
+                    </div>
+                </div>
+                <div id="div3">
+                    <div id="div4">
+
+                    </div>
+                </div>
+            </div>
+            <p><b>Note</b>: An important point to be noted here is that in case of alpha channel, only a specific
+                element's transparency is affected. If we add any text inside the partially transparent div or any other
+                element, in that case, the text will have 100% transparency. Below is an example of the same:</p>
+            <div id="div6">
+                <div id="div7">
+                    This is test text.
+                </div>
+            </div>
+        </li>
+
+    </ol>
+</body>
+
+</html>

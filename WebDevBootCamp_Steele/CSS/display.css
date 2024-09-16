@@ -1,13 +1,13 @@
 .nav,
 a {
-    width: 300px;
     text-decoration: none;
+    width: 300px;
 }
 
 .nav2,
 a {
-    width: 800px;
     text-decoration: none;
+    width: 1000px;
 }
 
 h3 {
