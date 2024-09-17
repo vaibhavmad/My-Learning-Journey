@@ -29,11 +29,16 @@
                 <td><a href="display.html">5. Display Property</a></td>
                 <td><a href="css_units.html">6. CSS Units</a></td>
                 <td><a href="other_css_prop.html">7. Other CSS Properties</a></td>
+                <td><a href="resp_flex.html">8. Responsive CSS & FlexBox</a></td>
+
             </tr>
         </table>
         <hr>
     </nav>
     <h1>Other CSS Properties</h1>
+    <p>These are advanced properties, do not spend a lot of time on this for now. This is something that we can learn
+        while working as all of this comes in intermediate to advanced CSS, which we do not need as of now. We can read
+        more about this later.</p>
     <h3>Index</h3>
     <ol>
         <li>Opacity & The Alpha Channel: Important</li>
@@ -72,8 +77,62 @@
                 </div>
             </div>
         </li>
-
+        <br>
+        <li>
+            <b>Opacity</b>: Opacity as the name suggests is very similar to alpha channel as it controls tha opacity of
+            an element. However, there are some fundamental differences between opacity and alpha channel. <br>
+            1. When we talk about opacity, it is a separate property and ranges between 0 to 100 when it comes to the
+            value. <br>
+            2. Also, Unlike alpha channel, opacity when declared for an element, gets applied to the children as well.
+            <br>
+            Let's look at the example below to understand more: <br>
+            <div id="div8">
+                <div id="div9">
+                    This is test text.
+                </div>
+            </div>
+            <p>It is clearly visible that we have a div inside another div. Now, the inner div has some opacity declared
+                and the same gets applied to the text inside the div.</p>
+        </li>
     </ol>
+    <h2>The Position Property</h2>
+    <p>The position element is used to set the position of elements on a webpage. It is needed when we have to design
+        certain elements or multi layered elements. The most common properties are:</p>
+    <ol>
+        <li>Static</li>
+        <li>Relative</li>
+        <li>Absolute</li>
+        <li>Fixed</li>
+        <li>Sticky</li>
+    </ol>
+    <p>These properties are used to place elements on the page. Learn this with practice as this is a huge topic and not
+        needed for basics at this moment.</p>
+    <h2>CSS Transitions</h2>
+    <p>Transitions allow us to animate elements from one state to another. Let's suppose we have a div square and on
+        hovering it gets converted to a circle. Like below</p>
+    <div class="circle"></div>
+    <p>As soon as we place our cursor on top of this shape, it gets converted to a square and takes its form again as
+        the mouse is removed. However, the conversion or transition from one shape to another is instant and is not
+        production level.</p>
+    <p>Now by using transition property, we can delay this conversion, make the same more smooth by delaying the change
+        from instant to, like 1.5 seconds, like in the shape below:</p>
+    <div class="circle2"></div>
+    <p>This is one of the simplest examples of a transition. We can further do this for only one element, add delay etc.
+        While this is important, we do not need to do a deep dive into this as the moment. Like position, we shall learn
+        this while working on projects.</p>
+    <h2>Transform</h2>
+    <p>Transform one element from one state to other in terms of position, size, etc. Read more when one such feature is
+        needed.</p>
+
+    <p><b><a href="hover-button.html">Transform Project</a></b></p>
+
+    <h2>Background</h2>
+    <p>Background property is a shorthand for a bunch of properties. background-color is one of such properties. We can
+        further add an image and do more stuff. We can do multiple things with the image as well. Like the properties
+        above, we shall cover these later, while learning advanced CSS.</p>
+    <h2>Google fonts</h2>
+    <p>Can be used on any website by using the link element on a page and then adding the fetched fonts using css.</p>
+
 </body>
 
 </html>
