@@ -1,0 +1,26 @@
+body {
+    background-color: rgb(217, 245, 255);
+
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+main {
+    width: 80%;
+    background-color: white;
+    margin: auto;
+}
+
+
+.content-wrapper {
+    width: 90%;
+    margin: auto;
+}
+
+nav {
+    height: 3em;
+}
+
+.index {
+    background-color: rgb(218, 236, 255);
+    padding: 1em;
+}

@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bootstrap</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css">
+    <!-- <link rel="stylesheet" href="../styles.css"> -->
+</head>
+
+<body>
+    <main class="container">
+        <nav>
+            <!-- <p>This is Nav</p> -->
+        </nav>
+        <h1 class="text-center">Bootstrap</h1>
+        <div class="container">
+            <div class="row">
+                <div class="col-md-2">
+                    <h3>Index</h3>
+                    <ol>
+                        <li>What is Bootstrap?</li>
+                        <li>Including Bootstrap & Containers</li>
+                        <li>Bootstrap Buttons</li>
+                        <li>Bootstrap Typography & Utilities</li>
+                        <li>Badges, Alerts and Button Groups</li>
+                        <li>Bootstrap Grid</li>
+                        <li>Bootstrap Grid: Responsive</li>
+                        <li>Useful Grid Utilities</li>
+                        <li>Bootstrap & Forms</li>
+                        <li>Bootstrap Navbars</li>
+                        <li>Icons</li>
+                        <li>Other Utilities</li>
+                        <li>Project: Museum of Candy</li>
+                    </ol>
+                </div>
+                <div class="col-md-10">
+                    <h2>1. What is Bootstrap?</h2>
+                    <p>Bootstrap is framework(contains the basic design elements, that can be imported into a
+                        website and further enhanced as per the requirement), and contains pre-written code for HTML,
+                        CSS &
+                        JS.
+                        It helps in quickly creating a website using pre-existing layouts(templates) and components(such
+                        as
+                        navigation, gallery, etc.). As per Colt, we should not always rely on tools like Bootstrap,
+                        however,
+                        we
+                        should be aware of the fact that these exist.
+                    </p>
+                    <p>The most important aspect of Bootstrap is Grid which adds the responsive features, and we shall
+                        cover
+                        this later. Most common websites use similar frameworks to quickly deploy responsive sites. To
+                        access
+                        bootstrap website, click <a href="https://getbootstrap.com/">here</a>.</p>
+                    <h2>2. Including Bootstrap & Containers</h2>
+                    <h5>2.1 Including Bootstrap</h5>
+                    <p>To add Bootstrap CSS, we have two options. The first one is downloading the entire CSS code, save
+                        it
+                        locally, like we do with CSS files and then link them in the HTML code. The second method is to
+                        pick
+                        up
+                        a pre-built link from Bootstrap's website and then link it in the document. The styling is then
+                        sent
+                        over the network via a CDN.</p>
+                    <p><b>Note (Important)</b>:
+                    <ul>
+                        <li>
+                            As we have mentioned above that Bootstrap contains frontend code(HTML, CSS, JS)
+                            and some of the functions can not work without JS. Now, we have not covered the same so far.
+                            However, for Bootstrap to work properly, we shall have adjoining JS in the file. Now, the
+                            way to
+                            add
+                            JS is similar to adding CSS. We need to add script using script tag. Also, the same is added
+                            at
+                            the
+                            bottom, to help with page speeds.
+                        </li>
+                        <li>
+                            In case of production application, we shall download these files instead of linking in this
+                            way.
+                            The
+                            links can be changed or the site might go down, hence.
+                        </li>
+                    </ul>
+                    <p>We have added both CSS and JS linked to this file as well and shall style it using Bootstrap
+                        alone
+                        while
+                        we learn the same.</p>
+
+                    <p>Now before we move ahead, let us understand how Bootstrap works. The link that we have added for
+                        stylesheet above, is a very similar stylesheet to what we create locally. It has a bunch of
+                        classes,
+                        containing various properties and corresponsing values. Now, to add a pre-defined bootstrap
+                        style to
+                        an
+                        element on our webpage, we need to check on bootstrap website for the class and add that as a
+                        class
+                        to
+                        our element. As soon as the class is added, the corresponding style gets applied to that
+                        element.
+                        For
+                        example: we have class = "container" applied to the main tag on this page. On the basis of that
+                        alone, we have the margins and padding applied to the same.</p>
+                    <h5>2.2 Bootstrap Containers</h5>
+                    <p>bootstrap containers are the classes that help in defining the overall structure of a page. For
+                        example:
+                    </p>
+                    <ul>
+                        <li><b>class: container</b>: Simple single container that has 3 break points for mobile, laptop
+                            and
+                            tablet. The content becomes responsive on the basis of the viewport(screen) size.</li>
+                        <li><b>class: container-fluid</b>: Spans the entire width of the viewport.</li>
+                        <p>There are other containers as well such as container-md(medium), container-sm(small) etc.</p>
+                    </ul>
+                    <h2>3. Bootstrap Buttons</h2>
+                    <p>To add an element in the code, just copy the code of that element and add that in the code. Below
+                        are
+                        some of the examples:</p>
+                    <button type="button" class="btn btn-primary">Primary</button>
+                    <button type="button" class="btn btn-secondary">Secondary</button>
+                    <button type="button" class="btn btn-success">Success</button>
+                    <button type="button" class="btn btn-danger">Danger</button>
+                    <button type="button" class="btn btn-warning">Warning</button>
+                    <button type="button" class="btn btn-info">Info</button>
+                    <button type="button" class="btn btn-light">Light</button>
+                    <button type="button" class="btn btn-dark">Dark</button>
+                    <button type="button" class="btn btn-link">Link</button>
+
+                    <p>While these buttons carry pre-defined styles, we can also make changes to these and customize
+                        these
+                        are
+                        per our own requirement. This is something we shall cover later during the course. There are
+                        multiple
+                        such variations or designs of button and all Bootstrap buttons use 'btn' class'.</p>
+                    <p>We have other variations like converting an anchor tag into a button style, outline buttons, etc.
+                        Also,
+                        no need to learn the code for bootstrap. Always refer to the docs whenever info is needed or a
+                        new
+                        style
+                        has to be added.</p>
+                    <p>Further we have bootstrap sizes, large, small etc and all of this is mentioned in the docs. We
+                        also
+                        have
+                        the option of having active and disabled buttons(greyed out).</p>
+                    <h2>4. Bootstrap Typography and Utilities</h2>
+                    <p>Typography is standalone and does not come under components. Under typography we have different
+                        sizes
+                        for
+                        variuos elements. Below are the 4 sizes for H1.</p>
+                    <h1 class="display-1">Display 1</h1>
+                    <h1 class="display-2">Display 2</h1>
+                    <h1 class="display-3">Display 3</h1>
+                    <h1 class="display-4">Display 4</h1>
+                    <h1 class="display-5">Display 5</h1>
+                    <h1 class="display-6">Display 6</h1>
+
+                    <p>Similarly we can have different sizes for H2.</p>
+                    <h2 class="display-1">H2 D1</h2>
+                    <h2 class="display-2">H2 D2</h2>
+                    <h2 class="display-3">H2 D3</h2>
+                    <h2 class="display-4">H2 D4</h2>
+                    <h2 class="display-5">H2 D5</h2>
+                    <h2 class="display-6">H2 D6</h2>
+                    <h5>Lead Class</h5>
+                    <p class="lead">Adds prominence to a piece of text, like this one.</p>
+                    <p>Normal text looks like this. Lorem ipsum dolor, sit amet consectetur adipisicing elit. Asperiores
+                        non
+                        iure deleniti architecto, unde aut expedita mollitia ipsam provident atque odit praesentium illo
+                        sit
+                        excepturi inventore iusto nulla voluptatibus dolores.</p>
+                    <p>Similarly we have options for block-qoute, margins using classes, alignments(left, right), etc..
+                    </p>
+                    <p>Similarly we have utilities and under utilities we have colors, background colors, </p>
+                </div>
+            </div>
+        </div>
+    </main>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>
