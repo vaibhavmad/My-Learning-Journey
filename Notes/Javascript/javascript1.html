@@ -45,6 +45,7 @@
                     <li>Javascript Basics</li>
                     <ul>
                         <li>Primitive Types</li>
+                        <li>Variables</li>
                     </ul>
                 </ol>
             </div>
@@ -118,9 +119,131 @@
                                 <img src="image copy.png" style="width: 200px;">
                                 </p>
                             </li>
+                            <li><b>Booleans</b>: Booleans is another data type and only stores two values: True and
+                                False. These are special keywords in JS. Booleans are used to run logical statements and
+                                further making decisions. The values must always be written in lower case i.e. 'true'
+                                and 'false'. We shall use booleans later in the course.
+                            </li>
                         </ol>
+                        <h5>2.2 Variables</h5>
+                        <p>
+                            Variables are labels for Data, so as to declare the same once, manipulate and refer back to
+                            the same again. Variables are used to store information under labels, such as name, numbers,
+                            etc..
+                        </p>
+                        <p>
+                            To declare a variable, we use the following syntax: <br><br>
 
+                            <b>let variableName = value;</b> <br> <br>
+                            An example of the same is: <br>
+                            <b>let year = 1988;</b>
+                        </p>
+                        <p>
+                            Variables are used to store values and then perform operations on those values. For example:
+                            <br>
+                            <img src="Screenshot 2024-09-19 at 5.15.40 PM.png" style="width: 300px;" alt="">
+                        </p>
+                        <p>
+                            Here, we only retrieved the values of year and age, and the info still remains unchanged.
+                            The value of the sum was then stored in a new variable birthyear.
+                        </p>
 
+                        <p>
+                            Everytime we need to add any value to a variable, we follow the below syntax:
+                            <br>
+                            <b>let score = 0;</b> <br>
+                            <b>score = score + 5</b> <br>
+
+                            <b>score = score + 5</b>
+                            <br>
+                            <br>
+                            Here, we have added 5 to the score twice and the final value of score is 10. However, there
+                            is a shorter way to do this. Therefore, instead of doing the following
+                            <br>
+                            <b>let score = 0;</b> <br>
+                            <b>score += 5;</b> <br>
+                            <b>score += 5;</b>
+                            <br>
+                            <br>
+                            This output of the syntax above is same as the earlier longer syntax. Similar to addition we
+                            can do <b>subtraction</b> also, by using <b>score-=</b> or <b>multiplication</b> by using
+                            <b>score *= 10</b>.
+                            <br>
+                            Using this type of calculation for adding 1 or subtracting 1 is very common and for that we
+                            use a very simple syntax <br>
+                            <b>score++</b> or <b>score--</b>
+                        <p style="color: blue;"><b>Note:</b> Similar to the above syntax, there is another syntax which
+                            is written as ++score. Now these are very confusing in nature and have a very small
+                            difference in how these elements operate.
+                        </p>
+                        <ul>
+                            <li>
+                                <b>i++</b>: i++ is also known as postfix increment operator. When this is used, it first
+                                returns the value of i and then add then increments the value of i. <br>
+                                <img src="Screenshot 2024-09-19 at 5.36.44 PM.png" style="width: 200px;" alt="">
+                            </li>
+                            <li>
+                                <b>++i</b>: It is known as prefix increment operator. It firsts increases the value and
+                                then returns the incremented value. <br>
+                                <img src="Screenshot 2024-09-19 at 5.40.36 PM.png" style="width: 200px;" alt="">
+                            </li>
+                        </ul>
+                        </p>
+                        <p>
+                            So far we have used variables to store only one type of data, however, we can use the same
+                            vairable to store any type of date. <br>
+                            <b>let newVar = 10;</b> <br>
+                            <b>newVar = "Hello"</b>
+                        </p>
+                        <h5 style="color: red;"> <b>Important</b></h5>
+                        <p>
+                            To declare a variable, we have so far used the keyword 'let'. However, there are two more
+                            keywords that can be used to declare keywords. These are:
+                        </p>
+                        <ul>
+                            <li><b>const</b>: const stands for constant and a constant is value that does not change. We
+                                use the same variable, like let. Let's have a look at how these differ from each other.
+                                <br>
+                                <img src="Screenshot 2024-09-19 at 5.49.07 PM.png" style="width: 600px;" alt=""> <br>
+                                Now, we can see here that we declared two variables almost in the same manner, however,
+                                one was declared using 'let' and the second one was declared using 'const'. Post which,
+                                we tried incrementing both the variables, however, while doing this for const, we got an
+                                error. <br>
+                                We use 'const' to declare those variables, whose values should not be changed. For
+                                example, days in a week or mins in an hour. There are more uses, that we shall know of
+                                later during data structures.
+                            </li>
+                            <br>
+                            <li><b>var</b>: This is the old way of declaring variables. It still works and is almost
+                                similar to 'let'. There are some distinctions but shall be discussed later. Now, you may
+                                run into it while going through code, however, for writing new code this should not be
+                                used.
+                                <br>
+                            </li>
+                        </ul>
+                        <h5 style="color: red;"> <b>Variable Naming Conventions in JS</b></h5>
+                        <p>There are hard rules and some generally followed conventions/best-practices that JS
+                            developers must follow.
+                        </p>
+                        <p>
+                            <b>Hard Rules:</b>
+                        <ol>
+                            <li>We cant have spaces in the identifier names.</li>
+                            <li>We cant have variables starting with numbers, but we can have a number in between or at
+                                the end.</li>
+                            <li>Identifiers / Variables are case sensitive and might contain '_', '$', etc..</li>
+                        </ol>
+                        <b>Conventions:</b>
+                        <ol>
+                            <li>useCamleCaseToNameVariables.</li>
+                            <li>Usually underscore is also avoided.</li>
+                            <li>It is important to come up with good names and the names must have a meaning. Such as
+                                currentYear, userInput1, userName, userEmail, etc.</li>
+                            <li>For boolean names, try using something like isLoggedIn or isGameOver, since such names
+                                make it easy to understand and also separate out boolean variables..</li>
+                            <li>We must avoid one letter variables.</li>
+                        </ol>
+                        </p>
                     </div>
                 </div>
             </article>
