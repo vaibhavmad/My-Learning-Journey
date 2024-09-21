@@ -38,18 +38,43 @@
     </nav>
     <div class="container text-center">
         <div class="row">
-            <div class="col-2 text-start">
+            <div class="col-3 text-start">
                 <H2>Index</H2>
-                <ol>
-                    <li>Introduction</li>
-                    <li>Javascript Basics</li>
-                    <ul>
-                        <li>Primitive Types</li>
-                        <li>Variables</li>
-                    </ul>
+                <ol type="1">
+                    <li style="color: blue;"><b>Introduction</b></li>
+                    <li style=" color: blue;"><b>Javascript Basics</b></li>
+                    <ol type="A">
+                        <li><b>Primitive Types</b></li>
+                        <ol>
+                            <li>Numbers</li>
+                            <ol>
+                                <li>Number Operators</li>
+                                <li>NaN: Not a Number</li>
+                                <li>Math Object(Random & More)</li>
+                            </ol>
+                            <li>Strings</li>
+                            <ol>
+                                <li>String Index</li>
+                                <li>String Length</li>
+                                <li>String Concatenation</li>
+                                <li>String Methods - Inbuilt string methods such as upper case, lower case, trim</li>
+                                <li>Template Literals</li>
+                            </ol>
+                            <li>Boolean</li>
+                            <li>Null</li>
+                            <li>Undefined</li>
+                        </ol>
+                        <li><b>Variables</b></li>
+                        <ol>
+                            <li>Declaration</li>
+                            <li>Variable Operations</li>
+                            <li>Const</li>
+                            <li>Variable Naming Convention</li>
+                        </ol>
+                    </ol>
                 </ol>
             </div>
-            <article class="col-10 text-start border-start">
+            <article class="col-9 text-start border-start">
                 <h1>Javascript</h1>
                 <div class="m-2 ps-3">
                     <h3>1. Introduction</h3>
@@ -118,12 +143,146 @@
                                     will come in handy.</p>
                                 <img src="image copy.png" style="width: 200px;">
                                 </p>
+                                <h6 style="color: red;"> <b>Math Object</b></h6>
+                                <p>
+                                    Math object is an inbuilt collection of matahematical properties, that helps in
+                                    performing math operations. These are done by using math.properties(). Some examples
+                                    are:
+                                <ul>
+                                    <li>Math.floor(23.9901) shall give us 23. Simply chop of decimals.</li>
+                                    <li>Math.random() shall give us any random decimal between 0 and 1. Further
+                                        calculations with this are used to generate random numbers between given set of
+                                        inputs. Refer last video of strings for this.</li>
+                                </ul>
+                                </p>
                             </li>
+                            <li><b>Strings</b>: Strings are the data type related to text or textual information
+                                (strings of characters). Strings are always written in " " (inverted quotes). We can
+                                also use single quotes, depends on the developer, however, in one file we should remain
+                                consistent and shall have only one type of quotes sorrounding the text.
+                                <h6 style="color: red;"> <b>Important</b></h6>
+                                <p>
+                                    > Strings are indexed, meaning each character has a corresponding index. The index
+                                    start with 0 and goes on till the last number. For example:
+                                </p>
+                                <p>
+                                    H&nbsp;E&nbsp;L&nbsp;L&nbsp;O <br>
+                                    0&nbsp;1&nbsp;2&nbsp;3&nbsp;4
+                                </p>
+                                <p>
+                                    As we can see above, the index always starts with 0 and ends at the last character.
+                                    Individual charactes can be access by using [index] after the string. For example:
+                                    <br>
+                                    HELLO[3] will be L <br>
+                                    or <br>
+                                    Animal[0] will be A
+                                </p>
+                                <h6 style="color: red;"> <b>Important</b></h6>
+                                <p>
+                                    > Also, all strings have a built in property, which is length. We can simple do <br>
+                                    Animal.length will be 6 <br>
+                                    Here, length will give us the number of characters and not the highest index. It is
+                                    to be noted that length also accounts for spaces and other characters in a string.
+                                </p>
+                                <h6 style="color: red;"> <b>Important</b></h6>
+                                <p>
+                                    Strings can be combined together using concatenation by using '+' sign. If we have
+                                    first name and last name of a person and we add both using +, the first string will
+                                    be prefixed to the second one as in the example below:
+                                </p>
+                                <p>
+                                    "Virat" + "Kohli" will give us "ViratKohli".
+                                </p>
+                                <p>
+                                    Also, if we concatenate a string with a number, both types are treated as strings in
+                                    this case. We shall learn more about it in future and here's an example of the same
+                                    below
+                                </p>
+                                <p>
+                                    "Virat" + 18 will be "Virat18"
+                                </p>
+                            </li>
+                            <h6 style="color: red;"> <b>****String Methods****</b></h6>
+                            <p>
+                                String methods are built-in actions that help us in manipulating indiviual strings. Some
+                                examples of these actions are: searching within a string, replacing part of a string,
+                                chaging from lowerCase to upperCase. The syntax for using a method is similar to using
+                                length(which is a property): hello.method(). We need to add a method and must add
+                                brackets at the end of it.
+                            </p>
+                            <p>
+                                The most common strings methods are:
+                            <ul>
+                                <li>.toUpperCase()</li>
+                                <li>.toLowerCase()</li>
+                                <li>.trim(): It will remove any white space at the beginning and end of a string.</li>
+                            </ul>
+                            Methods can be combined in a single string to perform any actions. For example we can have
+                            hello.trim().toUpperCase() .
+                            </p>
+                            <p>
+                                So far we have used methods with brackets with nothing inside them. However, there are
+                                certain methods where we can add values within the brackets. This value that we pass in
+                                the brackets is known as arguments. Some of these are:
+                            <ul>
+                                <li>indexOf(): Pass a character in the brackets, such as in case of hello.indexof('h')
+                                    and we shall get 0 as the answer. It must be noted, that we will only get the first
+                                    occurence of the character, in case of duplicate characters. For example, in case of
+                                    hello.indexOf('l'), the answer will be 2 as the first 'l' is at index 3. Also, if we
+                                    pass in an argument that is not present in the string, we shall get -1 as the
+                                    response. We can also use longer strings and not charactes only, such as
+                                    hello.indexOf('ell') shall give us 2 as the answer.</li>
+                                <li>slice()</li>
+                                <li>replace()</li>
+                                <li>repeat()</li>
+                            </ul>
+                            </p>
+                            <h6 style="color: red;"> <b>String Template Literals - Adding Variables to Strings</b></h6>
+                            <p>
+                                We have seen that we can use concatenation to combine strings and variables or strings
+                                and strings together. However, there can be a situation, when we need to add
+                                calculations or simple equations to strings. For this, we use string template. In String
+                                Template, we can not only add calculations, but variables also. Let's learn more about
+                                it below:
+                            <ul>
+                                <li>String literals are used to add valuable non-sting information in the strings.</li>
+                                <li>To highlight that a string is a string literal, we sorround it in back-ticks
+                                    insteas of single of double quotes. Below is an example of the same:
+                                    <p> <b>`this is a sample string inside back ticks'</b></p>
+                                </li>
+                                <li>To add a special info(non string) in a string literal, we use a $(dollar) sign
+                                    followed by {}(curly braces). Here's an example of the same below:
+                                    <p><b>`sum of two and three is ${2 + 3}.</b></p>
+                                    <p>In the above example, the sum will take place inside the string only. Below's a
+                                        working illustration of the same:</p>
+                                    <div>
+                                        <img src="image copy 2.png" style="width: 500px;">
+                                    </div>
+                                    <p>Similarly we can add variables or equations containing variables in such strings
+                                        and we shall get the calculated result. For example, you want to greet a
+                                        customer on your website, you can simply output the greeting with the first_name
+                                        variable and that should be it.</p>
+                                </li>
+                            </ul>
+                            </p>
                             <li><b>Booleans</b>: Booleans is another data type and only stores two values: True and
                                 False. These are special keywords in JS. Booleans are used to run logical statements and
                                 further making decisions. The values must always be written in lower case i.e. 'true'
                                 and 'false'. We shall use booleans later in the course.
                             </li>
+                            <li><b>NULL and Undefined</b>:Both null and underfined are single values.
+                                <p>
+                                    If we define a variable and do not give it a value, or if we refer to a string index
+                                    such as hello[20], that does not exist, JS gives it a value of undefined. This is
+                                    JS's way of telling the system that I do not know.
+                                </p>
+                                <p>
+                                    Null on the other hand is an intentional lack of value and is declared by the user.
+                                    Like for example, giving the value null to a variable, when we do not know the
+                                    initial value of a variable.
+                                </p>
+                            </li>
+
                         </ol>
                         <h5>2.2 Variables</h5>
                         <p>
@@ -195,7 +354,7 @@
                             <b>let newVar = 10;</b> <br>
                             <b>newVar = "Hello"</b>
                         </p>
-                        <h5 style="color: red;"> <b>Important</b></h5>
+                        <h6 style="color: red;"> <b>Important</b></h6>
                         <p>
                             To declare a variable, we have so far used the keyword 'let'. However, there are two more
                             keywords that can be used to declare keywords. These are:
@@ -245,6 +404,39 @@
                         </ol>
                         </p>
                     </div>
+                    <h3>3. Javascript Decision Making(If-else)</h3>
+                    <p>Decision making is one of the core subject in JS and is also known as boolean logic. Let us first
+                        understand why this is important. Also, another point to be noted is that the logic is common
+                        across programming languages. </p>
+                    <p>
+                        Here's an example. <br>
+                        <b>isUserLoggedin > No:</b> <br>
+                        &nbsp; &nbsp; Show login Button <br>
+                        or <br>
+                        <b>isUserLoggedin > Yes:</b> <br>
+                        &nbsp; &nbsp; Hide login Button <br>
+                    <p>Here, on the basis of user's login state, the system is making a decision of whether to show the
+                        login button or not. There are similar multiple uses of conditionals in any langauge. For
+                        example: is amount paid? or is game over or is user above 18 or is user registered, on the basis
+                        of the values of these variables, we can show different details to the user. And it is not
+                        limited to showing details to the user, we can also make decisions within the program to create
+                        logics etc..</p>
+                    </p>
+                    <h5 style="color: red;"> <b>Comparison Operators</b></h5>
+                    <p>Comparison operators as the name suggests are symbols(operators) that are used to compare two
+                        statements(expressions). Following are the comparison operators in Java.</p>
+                    <ol>
+                        <li>> // greater than</li>
+                        <li>
+                            < // smaller than</li>
+                        <li>>= // greater than or equal to</li>
+                        <li>
+                            <= // smaller than or equal to</li>
+                        <li>== // equality</li>
+                        <li>!= // not equal</li>
+                        <li>=== // strictly equal</li>
+                        <li>!== // strictly not equal</li>
+                    </ol>
                 </div>
             </article>
 
